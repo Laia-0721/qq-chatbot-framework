@@ -1,0 +1,18 @@
+version: "3"
+services:
+  napcat:
+    image: mlikiowa/napcat-docker:latest
+    container_name: napcat
+    restart: always
+    # 使用 host 网络模式，QQ 协议端与机器人通过 127.0.0.1 通信
+    network_mode: host
+    environment:
+      - NAPCAT_UID=0
+      - NAPCAT_GID=0
+    volumes:
+      # NapCat 配置目录（相对本文件所在目录）
+      - ./config:/app/napcat/config
+      # QQ 客户端数据目录，首次运行会自动生成，请勿提交到 Git
+      - ./ntqq:/app/.config/QQ
+      # 视频解析插件缓存目录
+      - /root/.cache/nonebot2/nonebot_plugin_parser:/root/.cache/nonebot2/nonebot_plugin_parser

@@ -1,0 +1,4 @@
+# 运行时生成的数据文件会放在本目录，均不应提交到 Git：
+#   signin.json         打卡记录
+#   nickname_cache.json 群昵称缓存
+#   city_mapping.json   城市映射（由 generate_city_mapping.py 生成）

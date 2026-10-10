@@ -1,0 +1,26 @@
+[project]
+name = "QQ_chatbot"
+version = "0.1.0"
+description = "基于 NoneBot2 + NapCat 的 QQ 群聊机器人框架（AI 聊天 / 识图 / 打卡 / 天气）"
+readme = "README.md"
+requires-python = ">=3.10, <4.0"
+dependencies = [
+    "nonebot2[fastapi]>=2.5.0",
+    "nonebot-adapter-onebot>=1.0.0",
+    "nonebot-plugin-localstore>=0.7.4",
+    "nonebot-plugin-parser>=2.6.0",
+]
+
+[tool.nonebot]
+# 本地插件目录：bot.py 与 `nb run` 都会加载其中的插件
+plugin_dirs = ["plugins"]
+builtin_plugins = []
+
+[tool.nonebot.adapters]
+nonebot-adapter-onebot = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot" }
+]
+
+[tool.nonebot.plugins]
+nonebot-plugin-localstore = ["nonebot_plugin_localstore"]
+nonebot-plugin-parser = ["nonebot_plugin_parser"]

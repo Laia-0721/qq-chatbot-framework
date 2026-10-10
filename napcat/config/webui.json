@@ -1,0 +1,17 @@
+{
+  "host": "::",
+  "port": 6099,
+  "token": "",
+  "loginRate": 10,
+  "autoLoginAccount": "",
+  "theme": {
+    "fontMode": "system"
+  },
+  "disableWebUI": false,
+  "accessControlMode": "none",
+  "ipWhitelist": [],
+  "ipBlacklist": [],
+  "enableXForwardedFor": false,
+  "enable2FA": false,
+  "totpSecret": ""
+}

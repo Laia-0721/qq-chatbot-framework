@@ -1,0 +1,17 @@
+[Unit]
+Description=QQ Bot NoneBot2 Service
+After=network.target docker.service
+
+[Service]
+Type=simple
+User=root
+# 按实际部署路径修改
+WorkingDirectory=/root/QQ_chatbot
+Environment="PATH=/root/QQ_chatbot/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# 直接以 bot.py 启动；不要用 `nb run`，它不会执行 bot.py
+ExecStart=/root/QQ_chatbot/.venv/bin/python /root/QQ_chatbot/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

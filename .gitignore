@@ -1,0 +1,34 @@
+# ---- 密钥与配置 ----
+.env
+.env.prod
+**/.env
+**/.env.prod
+**/*.env
+!**/.env.example
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+
+# ---- 运行时数据（含真实 QQ 号，绝不提交）----
+qqbot/data/signin.json
+qqbot/data/nickname_cache.json
+qqbot/data/city_mapping.json
+
+# ---- NapCat / QQ 客户端数据 ----
+napcat/ntqq/
+*.qqxlog
+*.db
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
